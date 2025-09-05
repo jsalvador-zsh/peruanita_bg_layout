@@ -14,6 +14,7 @@
     'version': '2.0',
     "data": [
         'reports/peruanita_layout_background.xml',
+        'reports/peruanita_layout_background_horizontal.xml',
         'reports/paperformat.xml',
     ],
 }

@@ -2,7 +2,7 @@
 <odoo noupdate="1">
     <record id="paperformat_custom_a4" model="report.paperformat">
         <field name="name">Custom A4</field>
-        <field name="default" eval="True"/>
+        <field name="default" eval="True" />
         <field name="format">A4</field>
         <field name="page_height">0</field>
         <field name="page_width">0</field>
@@ -11,12 +11,22 @@
         <field name="margin_bottom">28</field>
         <field name="margin_left">7</field>
         <field name="margin_right">7</field>
-        <field name="header_line" eval="False"/>
+        <field name="header_line" eval="False" />
         <field name="header_spacing">25</field>
         <field name="dpi">90</field>
     </record>
-
-    <record id="base.main_company" model="res.company">
-        <field name="paperformat_id" ref="peruanita_bg_layout.paperformat_custom_a4"/>
+    <record id="paperformat_a4_horizontal" model="report.paperformat">
+        <field name="name">A4 - Horizontal</field>
+        <field name="default" eval="False" />
+        <field name="format">A4</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">70</field>
+        <field name="margin_bottom">20</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="dpi">90</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">65</field>
+        <field name="disable_shrinking">True</field>
     </record>
 </odoo>
