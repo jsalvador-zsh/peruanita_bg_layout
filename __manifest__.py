@@ -9,7 +9,7 @@
         "web"
     ],
     'installable': True,
-    'application': True,
+    'application': False,
     'auto_install': False,
     "category": "uncategorized",
     'version': '2.0',
