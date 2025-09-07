@@ -1,6 +1,7 @@
 {
     "name": "Layout Background Peruanita",
     "author": "Juan Salvador",
+    "website": 'https://jsalvador.dev',
     "description": "Módulo para agregar un encabezado y pie de página a los reportes",
     "depends": [
         "base",
