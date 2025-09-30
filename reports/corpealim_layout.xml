@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <template id="corpealim_layout_background">
+    <div t-attf-class="header o_company_#{company.id}_layout_corpealim">
+      <t t-set="o" t-value="o if o else (doc if doc else docs[0])" />
+      <div class="o_report_header_corpealim">
+        <div class="row align-items-center" style="min-height: 120px;">
+          <div class="col-2 d-flex justify-content-center align-items-center" name="company_logo_corpealim"
+            style="height: 100%; margin-right:10px;">
+            <img t-if="company.corpealim_logo" t-att-src="image_data_uri(company.corpealim_logo)" alt="Logo Corpealim"
+              class="w-100" style="max-height: 100px; object-fit: contain;" />
+          </div>
+          <div class="col-10 d-flex flex-column justify-content-center" name="company_address_corpealim">
+            <div>
+              <span style="font-size:20px; font-weight:900;">
+                CORPEALIM EIRL
+              </span>
+            </div>
+            <div>
+              <span t-field="company.corpealim_address" style="font-size:15px;" />
+            </div>
+            <div t-if="company.corpealim_ruc">
+              <b style="font-size:15px;"> RUC: </b>
+              <span t-field="company.corpealim_ruc" style="font-size:15px;" />
+            </div>
+            <div t-if="company.corpealim_email">
+              <b style="font-size:15px;"> Email: </b>
+              <span t-field="company.corpealim_email" style="font-size:15px;" />
+            </div>
+            <div t-if="company.corpealim_phone">
+              <b style="font-size:15px;"> Teléfono: </b>
+              <span t-field="company.corpealim_phone" style="font-size:15px;" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div t-attf-class="o_company_#{company.id}_layout_corpealim article o_report_layout_corpealim"
+      t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+      t-att-data-oe-lang="o and o.env.context.get('lang')">
+      <t t-raw="0" />
+    </div>
+    <div class="footer o_company_#{company.id}_layout_corpealim">
+      <div class="o_report_footer_corpealim">
+        <div class="row align-items-center">
+          <div class="col-12 d-flex flex-column justify-content-center" name="company_info_corpealim">
+            <div class="text-center" style="font-size:13px; margin-top: 5px;">
+              <span>CORPEALIM EIRL - Nutrición y calidad para todos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</odoo>

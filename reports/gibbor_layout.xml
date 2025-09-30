@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <template id="gibbor_layout_background">
+    <div t-attf-class="header o_company_#{company.id}_layout_gibbor">
+      <t t-set="o" t-value="o if o else (doc if doc else docs[0])" />
+      <div class="o_report_header_gibbor">
+        <div class="row align-items-center" style="min-height: 120px;">
+          <div class="col-2 d-flex justify-content-center align-items-center" name="company_logo_gibbor"
+            style="height: 100%; margin-right:10px;">
+            <img t-if="company.gibbor_logo" t-att-src="image_data_uri(company.gibbor_logo)" alt="Logo Gibbor"
+              class="w-100" style="max-height: 100px; object-fit: contain;" />
+          </div>
+          <div class="col-10 d-flex flex-column justify-content-center" name="company_address_gibbor">
+            <div>
+              <span style="font-size:20px; font-weight:900;">
+                GIBBOR ALIMENTOS S.A.C
+              </span>
+            </div>
+            <div>
+              <span t-field="company.gibbor_address" style="font-size:15px;" />
+            </div>
+            <div t-if="company.gibbor_ruc">
+              <b style="font-size:15px;"> RUC: </b>
+              <span t-field="company.gibbor_ruc" style="font-size:15px;" />
+            </div>
+            <div t-if="company.gibbor_email">
+              <b style="font-size:15px;"> Email: </b>
+              <span t-field="company.gibbor_email" style="font-size:15px;" />
+            </div>
+            <div t-if="company.gibbor_phone">
+              <b style="font-size:15px;"> Teléfono: </b>
+              <span t-field="company.gibbor_phone" style="font-size:15px;" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div t-attf-class="o_company_#{company.id}_layout_gibbor article o_report_layout_gibbor"
+      t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+      t-att-data-oe-lang="o and o.env.context.get('lang')">
+      <t t-raw="0" />
+    </div>
+    <div class="footer o_company_#{company.id}_layout_gibbor">
+      <div class="o_report_footer_gibbor">
+        <div class="row align-items-center">
+          <div class="col-12 d-flex flex-column justify-content-center" name="company_info_gibbor">
+            <div class="text-center" style="font-size:13px; margin-top: 5px;">
+              <span>GIBBOR ALIMENTOS S.A.C - Calidad en cada producto</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</odoo>

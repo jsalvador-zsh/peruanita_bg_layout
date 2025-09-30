@@ -15,6 +15,8 @@
     'version': '2.0',
     "data": [
         'reports/paperformat.xml',
+        'reports/gibbor_layout.xml',
+        'reports/corpealim_layout.xml',
         'reports/peruanita_layout_background.xml'
     ],
 }
